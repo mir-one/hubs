@@ -42,7 +42,7 @@ class SceneUI extends Component {
       return (
         <div className={styles.ui}>
           <div className={styles.unavailable}>
-            <div>
+            <div className={styles.logoTagline}>
               <FormattedMessage id="scene-page.unavailable" defaultMessage="This scene is no longer available." />
             </div>
           </div>

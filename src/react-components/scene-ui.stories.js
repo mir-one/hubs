@@ -60,3 +60,15 @@ export const ShowUnavailable = () => (
     unavailable={true}
   />
 );
+
+export const RemixedScene = () => (
+  <SceneUI
+    sceneName="Child Scene"
+    sceneDescription="immature"
+    sceneScreenshotURL="https://example.com/"
+    sceneAttributions={{
+      creator: "Derivative Artist"
+    }}
+    parentScene={{ name: "Parent Scene", url: "https://example.test", attributions: { creator: "Über Artist" } }}
+  />
+);

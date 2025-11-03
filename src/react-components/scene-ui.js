@@ -87,24 +87,26 @@ class SceneUI extends Component {
       source = url && url.includes("sketchfab.com") ? "Sketchfab" : "";
 
       if (remix) {
-        <span className="remix">
-          <FormattedMessage
-            id="scene-page.remix-attribution"
-            defaultMessage="(Remixed from <a>{name} by {author}</a>)"
-            values={{
-              name: _name,
-              author: _author,
-              a: chunks =>
-                url ? (
-                  <a href={url} target="_blank" rel="noopener noreferrer">
-                    {chunks}
-                  </a>
-                ) : (
-                  <>{chunks}</>
-                )
-            }}
-          />
-        </span>;
+        return (
+          <span className="remix">
+            <FormattedMessage
+              id="scene-page.remix-attribution"
+              defaultMessage="(Remixed from <a>{name} by {author}</a>)"
+              values={{
+                name: _name,
+                author: _author,
+                a: chunks =>
+                  url ? (
+                    <a href={url} target="_blank" rel="noopener noreferrer">
+                      {chunks}
+                    </a>
+                  ) : (
+                    <>{chunks}</>
+                  )
+              }}
+            />
+          </span>
+        );
       } else if (source) {
         return (
           <span key={url}>

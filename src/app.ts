@@ -134,7 +134,7 @@ export class App {
       AEntity
     };
 
-    // reserve entity 0 to avoid needing to check for undefined everywhere eid is checked for existance
+    // reserve entity 0 to avoid needing to check for undefined everywhere eid is checked for existence
     addEntity(this.world);
 
     this.str2sid = new Map([[null, 0]]);
